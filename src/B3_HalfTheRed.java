@@ -16,17 +16,92 @@ public class B3_HalfTheRed extends World {
                 red = plane.howMuchRed();
                 green = plane.howMuchGreen();
                 blue = plane.howMuchBlue();
-            if(red>205 && green>200 && green<200 && col<150) {
-                plane.setPixelColor(100, 120, 100);
+                if (red > 205 && green > 200 && green < 200 && col < 150) {
+                    plane.setPixelColor(100, 120, 100);
 
 
+                }
+//            if(red>110 && green>250 && green>250 && col<800){
+//                plane.teleport(row, 1-col);
+//                plane.setPixelColor(200,220,230);
+//            }
+                else {
+                    plane.setPixelColor(red, row / 6, col / 2);
+                }
+                plane.teleport(col, 488 - row);
+                plane.setPixelColor(red, row / 3, col / 5);
+
+
+
+                //moving winnie
+
+                plane.teleport(col+400, row);
+                plane.setPixelColor(red, green, blue);
+
             }
-            else {
-                plane.setPixelColor(red, row / 6, col / 2);
-            }
-//                plane.teleport(col, 488 - row);
-            }
+
         }
+        plane.teleport(470,370);
+        plane.isTrail = true;
+        plane.trailWidth = 4;
+        plane.startingAngle(45);
+        plane.move(30);
+        plane.startingAngle(-45);
+        plane.move(10);
+        plane.startingAngle(45);
+        plane.move(10);
+        plane.startingAngle(-45);
+        plane.move(30);
+        plane.isTrail = false;
+        plane.startingAngle(0);
+        plane.move(10);
+        plane.isTrail = true;
+        plane.startingAngle(90);
+        plane.move(30);
+        plane.isTrail = false;
+        plane.startingAngle(0);
+        plane.move(10);
+        plane.isTrail = true;
+        plane.startingAngle(270);
+        plane.move(30);
+        plane.startingAngle(45);
+        plane.move(40);
+        plane.startingAngle(-90);
+        plane.move(30);
+        plane.isTrail = false;
+        plane.startingAngle(0);
+        plane.move(10);
+        plane.startingAngle(90);
+        plane.move(30);
+        plane.isTrail = true;
+        plane.startingAngle(270);
+        plane.move(30);
+        plane.startingAngle(45);
+        plane.move(40);
+        plane.startingAngle(-90);
+        plane.move(30);
+        plane.isTrail = false;
+        plane.startingAngle(0);
+        plane.move(10);
+        plane.isTrail = true;
+        plane.startingAngle(90);
+        plane.move(30);
+        plane.isTrail = false;
+        plane.startingAngle(0);
+        plane.move(10);
+        plane.isTrail = true;
+        plane.startingAngle(-90);
+        plane.move(30);
+        plane.startingAngle(0);
+        plane.move(10);
+        plane.teleport(643,378);
+        plane.move(8);
+        plane.teleport(643,395);
+        plane.move(8);
+        plane.teleport(500,500);
+
+
+
     }
 }
 
@@ -40,7 +115,7 @@ public class B3_HalfTheRed extends World {
 	plane.ypos=100;            // Sets the yposition of the plane
    plane.isTrail=false;       // Sets if the plane has a trail
    plane.trailWidth=1;        // Sets the width of the trail from the plane
-   plane.pausetime=1;         // Sets how long the plane pauses each time it moves, 
+   plane.pausetime=1;         // Sets how long the plane pauses each time it moves,
                                  make this bigger to watch the drawing happen
    
 // Below are all the methods the plane can use:
